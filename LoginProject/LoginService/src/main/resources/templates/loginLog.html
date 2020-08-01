@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录日志</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>login_id</th>
+        <th>user_id</th>
+        <th>login_time</th>
+        <th>login_ip</th>
+    </tr>
+    <tr th:each = "u : ${logList}">
+        <td th:text = "${u.user_id}"> </td>
+        <td th:text = "${u.user_id}"> </td>
+        <td th:text = "${u.login_time}"> </td>
+        <td th:text = "${u.login_ip}"> </td>
+    </tr>
+</table>
+</body>
+</html>

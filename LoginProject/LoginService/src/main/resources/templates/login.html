@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 加载 React -->
+
+<!--    <script type="text/javascript" src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>-->
+<!--    <script type="text/javascript"-->
+<!--            src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>-->
+<!--    <script type="text/javascript" src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>-->
+</head>
+<body>
+
+<form method="post" action="/user/toLogin">
+    用户名：<input name="name" type="text" required><br/>
+    密 码：<input name="password" type="password" required><br/>
+    登 录：<input type="submit">
+</form>
+
+
+
+<!--<div id="loginPage"></div>-->
+<!--<script type="text/babel">-->
+
+<!--    class LoginForm extends React.Component {-->
+
+<!--        constructor(props) {-->
+<!--            super(props);-->
+
+<!--            this.state = {-->
+<!--                name: '',-->
+<!--                password: '',-->
+<!--            }-->
+
+<!--            this.login = this.login.bind(this);-->
+<!--            this.handleUserName = this.handleUserName.bind(this);-->
+<!--            this.handlePassWord = this.handlePassWord.bind(this)-->
+<!--        }-->
+
+<!--        handleUserName(e) {-->
+<!--            //读取输入的值-->
+<!--            const name = e.target.value;-->
+<!--            //更新password的状态-->
+<!--            this.setState({name});-->
+<!--            // this.setState({name: e.target.value})-->
+<!--        }-->
+
+<!--        handlePassWord(e) {-->
+<!--            //读取输入的值-->
+<!--            const password = e.target.value;-->
+<!--            //更新password的状态-->
+<!--            this.setState({password});-->
+<!--        }-->
+
+
+<!--        login() {-->
+<!--            var name = this.state.name;-->
+<!--            var password = this.state.password;-->
+<!--            var data = {name: name, password: password};-->
+
+<!--            function CheckRequest(response) {-->
+<!--                alert(response);-->
+<!--                if (!response.ok) {-->
+<!--                    var error = new Error(response.statusText);-->
+<!--                    error.response = response;-->
+<!--                    throw error-->
+<!--                } else {-->
+<!--                    return response.json()-->
+<!--                }-->
+<!--            }-->
+
+<!--            fetch('/user/toLogin', {-->
+<!--                method: "post",-->
+<!--                headers: {-->
+<!--                    "Content-type": "application/json"-->
+<!--                },-->
+<!--                body: JSON.stringify(data)//把提交的内容转字符串-->
+<!--                // body: JSON.stringify(postData)-->
+<!--                //     .then(res => res.json())-->
+<!--                //     .then(data => {-->
+<!--                //         console.log(data)-->
+<!--                //     })-->
+<!--            }).then(CheckRequest)-->
+<!--                .then(function (ReaData) {-->
+<!--                    console.log('request succeeded with JSON response', ReaData)-->
+<!--                })-->
+<!--                .catch(function (error) {-->
+<!--                    console.log('request failed', error)-->
+<!--                })-->
+<!--        }-->
+
+
+<!--        render() {-->
+<!--            return (-->
+<!--                <form>-->
+<!--                    <input type="text" id="name" value={this.state.name} onChange={this.handleUserName}-->
+<!--                           placeholder="用户名"/><br/>-->
+<!--                    <input type="password" id="password" value={this.state.password} onChange={this.handlePassWord}-->
+<!--                           placeholder="密码"/><br/>-->
+<!--                    <button style={{marginTop:10,width:300}} type="submit" onClick={this.login}>登录</button>-->
+<!--                </form>-->
+<!--            )-->
+<!--        }-->
+<!--    }-->
+
+
+<!--    ReactDOM-->
+<!--        .render(-->
+<!--            <LoginForm/>,-->
+<!--            document-->
+<!--                .getElementById(-->
+<!--                    'loginPage'-->
+<!--                ))-->
+
+<!--</script>-->
+
+</body>
+</html>
